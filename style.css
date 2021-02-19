@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Witcher'; /* Name of custom font */
+    src: url('fonts/Thewitcher\-jnOj.ttf'); /* URL to font */
+}
+
+@font-face {
+    font-family: 'Mason Serif Regular'; /* Name of custom font */
+    src: url('fonts/MasonSerif\ Regular.ttf'); /* URL to font */
+}
+
+html, body
+{
+    height: 100%; /* Ensure that the background image covers the entire screen */
+}
+
+body
+{
+    background-image:url('images/main\-background.jpg'); /* Location of background image */
+
+    background-color: rgba(0,0,0,0.75);
+    /*background-color: black; /* Background color for when the image is loading */
+
+    background-position: center center; /* Center image vertically and horizontally */
+    background-repeat: no-repeat; /* Ensure that the background image doesn't tile */
+    background-size: cover; /* Makes background image rescales based on container size */ 
+    background-attachment: fixed; /* Fixes the image in the viewport so that it doesn't move when the contents height > image */
+}
+
+header
+{
+    color: white; 
+    font-family: Witcher; 
+    font-size: 32px; 
+    line-height: 1.6em; 
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+div#desc
+{
+    color: white;
+    font-family: Mason Serif Regular;
+    font-size: 20px;
+    line-height: 1.6em;
+    word-spacing: 5px;
+    margin-top: 50px;
+    margin-left: 40px;
+
+    width: 850px;
+}
+
+table
+{
+    margin-top: 70px;
+    margin-left: 40px;
+
+    width: 850px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+tr
+{
+    text-align: center;
+}
+
+.upperRow
+{
+    border-bottom: 2px solid white;
+}
+
+#innerCol
+{
+    border-right: 2px solid white;
+}
+
+button
+{
+    background-color: transparent; /* Make the button transparent */
+    border: none;
+
+    text-align: center;
+    color: white;
+    font-family: Mason Serif Regular;
+    font-size: 22px;
+    line-height: 1.6em;
+    word-spacing: 5px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a:link, a:visited
+{
+    color: #e68a00;
+}
+
+a:hover
+{
+    color: #ffcc80;
+}
