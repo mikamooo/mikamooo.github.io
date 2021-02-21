@@ -27,57 +27,86 @@ body
 
 header
 {
+    /* Font settings*/
     color: white; 
     font-family: Witcher; 
-    font-size: 2.37vw; 
+    font-size: 2.37vw; /* Adjust font size realtive to viewport width */
     line-height: 1.6em; 
-    /*margin-top: 50px;*/
+
+    /* Margin settings */
     margin-top: 4%;
-    /*margin-left: 20px;*/
     margin-left: 1.5%;
 }
 
-div#desc
+#desc
 {
+    /* Font settings*/
     color: white;
     font-family: Mason Serif Regular;
-    font-size: 1.47vw;
+    font-size: 1.47vw; /* Adjust font size realtive to viewport width */
     line-height: 1.6em;
     word-spacing: 5px;
-    /*margin-top: 50px;*/
+
+    /* Margin settings specified in % of the width of the div */
     margin-top: 4%;
-    /*margin-left: 40px;*/
     margin-left: 3%;
 
-    /*width: 850px;*/
+    /* Width in % of the div */
     width: 63%;
+
+    opacity: 0;
+
+    /* Animation settings to fade the color */
+    animation-name: textFade; 
+    animation-delay: 2s;
+    animation-duration: 3s; 
+    animation-timing-function: ease-in;
+}
+
+@keyframes textFade
+{
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
 }
 
 table
 {
-    /*margin-top: 70px;*/
+    /* Margin settings specified in % of the width of the table */
     margin-top: 5.5%;
-    /*margin-left: 40px;*/
     margin-left: 3%;
 
-    /*width: 850px;*/
+    /* Width in % of the div */
     width: 63%;
+
+    /* Border settings */
     border: 2px solid white;
-    border-radius: 8px;
+    border-radius: 8px; /* Round the table corners */
+
+    opacity: 0;
+
+    /* Animation settings to fade the color */
+    animation-name: textFade; 
+    animation-delay: 2s;
+    animation-duration: 3s; 
+    animation-timing-function: ease-in;
 }
 
 tr
 {
-    text-align: center;
+    /* Align the text in the table row to the center horizontally */
+    text-align: center; 
 }
 
 .upperRow
 {
+    /* Bottom border settings */
     border-bottom: 2px solid white;
 }
 
 #innerCol
 {
+    /* Right border settings */
     border-right: 2px solid white;
 }
 
@@ -86,23 +115,50 @@ button
     background-color: transparent; /* Make the button transparent */
     border: none;
 
-    text-align: center;
+    text-align: center; /* Align the text in the button to the center horizontally */
+    
+    /* Font settings*/
     color: white;
     font-family: Mason Serif Regular;
-    font-size: 1.6vw;
+    font-size: 1.6vw; /* Adjust font size realtive to viewport width */
     line-height: 1.6em;
     word-spacing: 5px;
     
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* Margin settings specified in % of the width of the button */
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 a:link, a:visited
 {
+    /* Color for link, regardless if the link was visited */
     color: #e68a00;
 }
 
 a:hover
 {
+    /* Color of link on hover */
     color: #ffcc80;
+}
+
+span
+{
+    opacity: 0; /* Initial opacity (invisible) */
+    transition: all 0.5s ease; /* Transition with slow start, then fast, then slow end for 0.5s */
+}
+
+span.fade
+{
+    opacity: 1; /* Final opacity (make visible) */
+
+    /* Animation settings to fade the color */
+    animation-name: colorFade; 
+    animation-duration: 1s; 
+}
+
+@keyframes colorFade
+{
+    33% {color: #e68a00;}
+    66% {color: #ffcc80;}
+    100% {color: white;}
 }
